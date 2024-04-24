@@ -7,8 +7,9 @@
       <a href="https://github.com/KJB88">Github</a>
     </p>
   <p>
-    Repository for coursework for TechEd Software Development Bootcamp - Week 06
+    Repository for coursework for TechEd Software Development Bootcamp - Week 06.
   </p>
+  <p><b>Trello</b>: <a href="https://trello.com/b/bDz1PZ42/wk06-cookie-clicker-react">https://trello.com/b/bDz1PZ42/wk06-cookie-clicker-react</a></p>
 </div>
 <section>
   <h2>📋 Project Outline</h2>
