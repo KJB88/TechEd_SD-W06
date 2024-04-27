@@ -1,0 +1,40 @@
+/* Nav */
+nav {
+  font-weight: bold;
+  padding-top: 2.5px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  padding-left: var(--grid-gappage);
+  gap: 1rem;
+}
+
+nav ul li {
+  box-sizing: border-box;
+  width: max-content;
+  list-style-type: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  text-align: center;
+  width: max-content;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+}

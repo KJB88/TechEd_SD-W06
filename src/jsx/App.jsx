@@ -1,35 +1,55 @@
-import { useState } from "react";
-import reactLogo from "./react.svg";
-import viteLogo from "/vite.svg";
-import "./src/css/App.css";
+//import { useState, useEffect } from "react";
+import Header from "./components/header.jsx";
+import Main from "./components/bodyMain.jsx";
+import Footer from "./components/footer.jsx";
+import "../css/App.css";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <Main />
+      <Footer />
     </>
   );
 }
+/*
+  const [tims, setTims] = useState(0); // Total
+  const [tps, setTPS] = useState(1); // Passive
 
-export default App;
+  useEffect(() => {
+    // Set Timing
+    const myInterval = setInterval(() => {
+      increaseTims();
+    }, 1000 / tps);
+
+    // Stop Timing
+    return () => {
+      clearInterval(myInterval);
+    };
+  }, [tps]);
+
+  function increaseTims() {
+    setTims((currentTims) => {
+      // Local Storage here?
+      return currentTims + tps;
+    });
+  }
+
+  function buyUpgrade() {
+    setTPS((currentTPS) => {
+      return currentTPS + 1;
+    });
+  }
+
+  return (
+    <div>
+      <h1>Tim Clicker</h1>
+      <button onClick={increaseTims}>I am a Tim.</button>
+      <p>I have {tims} tims.</p>
+      <button onClick={buyUpgrade}>I am a Tim v2.</button>
+      <p>I have {tps} Tims per sec.</p>
+    </div>
+  );
+}
+*/
