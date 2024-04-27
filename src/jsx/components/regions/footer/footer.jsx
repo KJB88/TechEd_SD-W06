@@ -1,7 +1,9 @@
+import "../../../../css/footer.css";
+
 export default function Footer() {
   return (
     <footer>
-      <p>This is my footer.</p>
+      <p>Send help. Im losing my mind.</p>
     </footer>
   );
 }

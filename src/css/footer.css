@@ -1,2 +1,19 @@
 footer {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("tim_square.png");
+  background-position-y: 42%;
+
+  font-weight: bold;
 }

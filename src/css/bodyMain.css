@@ -1,29 +1,58 @@
 main {
+  z-index: 2;
   width: 100%;
-
+  height: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
 
 .panel {
-  margin-top: 100px;
-
   width: 300px;
   height: 300px;
   background-color: white;
-
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   border-radius: 20px;
-  border: 5px yellow solid;
+  border: 5px white solid;
+
+  background-image: url("vscode.png");
+  background-size: cover;
 }
 
 .clickableImage {
   width: 100px;
   height: 100px;
+  margin-bottom: 10px;
+  border: white solid 5px;
+  border-radius: 50%;
+}
 
-  margin-bottom: 20px;
+.stat-panel {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1.5rem;
+}
+
+.stat-text {
+  text-align: center;
+  margin-bottom: 10px;
+
+  font-size: 1.15rem;
+}
+
+.store-panel {
+  width: 300px;
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 20px;
+  border: 5px white solid;
+
+  background-color: darkred;
 }
