@@ -1,7 +1,7 @@
 //import { useState, useEffect } from "react";
-import Header from "./components/header.jsx";
-import Main from "./components/bodyMain.jsx";
-import Footer from "./components/footer.jsx";
+import Header from "./components/regions/header/header.jsx";
+import Main from "./components/regions/main/bodyMain.jsx";
+import Footer from "./components/regions/footer/footer.jsx";
 import "../css/App.css";
 
 export default function App() {

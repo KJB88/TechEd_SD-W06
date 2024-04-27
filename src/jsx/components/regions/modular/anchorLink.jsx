@@ -1,6 +1,6 @@
-import "../../css/common.css";
+import "../../../../css/common.css";
 
-export default function NavLink(data) {
+export default function AnchorLink(data) {
   return (
     <a href={data.url} className="drop-shadow-2px" aria-label={data.ariaLabel}>
       {data.innerText}
