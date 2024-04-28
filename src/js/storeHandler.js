@@ -1,5 +1,6 @@
 const itemStore = [
   {
+    itemID: 0,
     itemName: "Caffeinated Beverage",
     itemCost: 20,
     itemIncrease: 50,
@@ -10,15 +11,7 @@ const itemStore = [
       "They say a programmer turns coffee into code. Well, Tim needs a lot more coffee in that case. Ko-fi him a cup, why don'tcha?",
   },
   {
-    itemName: "Suspicious White Powder",
-    itemCost: 1000,
-    itemIncrease: 500,
-    itemSrc: "",
-    itemSrcAlt: "",
-    itemDesc: "Increases passive Tims gained per second by 5.",
-    itemFluff: "It's sugar, okay. Stop looking at me like that.",
-  },
-  {
+    itemID: 1,
     itemName: "More Fist",
     itemCost: 100,
     itemIncrease: 500,
@@ -29,6 +22,17 @@ const itemStore = [
       "How do you improve on the perfect technique? You add more fist. The beatings will continue until coding improves. ",
   },
   {
+    itemID: 2,
+    itemName: "Suspicious White Powder",
+    itemCost: 1000,
+    itemIncrease: 500,
+    itemSrc: "",
+    itemSrcAlt: "",
+    itemDesc: "Increases passive Tims gained per second by 5.",
+    itemFluff: "It's sugar, okay. Stop looking at me like that.",
+  },
+  {
+    itemID: 3,
     itemName: "Flying Elbow",
     itemCost: 1000,
     itemIncrease: 1000,
@@ -39,6 +43,7 @@ const itemStore = [
       "We've tried everything to keep Tim focused, but it's not helping. Time to enlist Manny to help from the top rope.",
   },
   {
+    itemID: 4,
     itemName: "Hire Joe(s)",
     itemCost: 5000,
     itemIncrease: 5000,
