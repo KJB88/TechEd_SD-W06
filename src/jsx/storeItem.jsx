@@ -1,9 +1,9 @@
-export default function StoreItem() {
+export default function StoreItem(data) {
   return (
     <div>
-      <span>ITEM NAME</span>
-      <img src="vite.svg">ITEM IMG</img>
-      <p>ITEM DESC</p>
+      <span>{data.itemName}</span>
+      <img src={data.itemSrc}></img>
+      <p>{data.itemDesc}</p>
     </div>
   );
 }
