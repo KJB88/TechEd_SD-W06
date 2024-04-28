@@ -9,6 +9,9 @@
   <p>
     Repository for coursework for TechEd Software Development Bootcamp - Week 06
   </p>
+  <p>
+    <b>Vercel Link</b>: <a href="https://tech-ed-sd-w06.vercel.app/">https://tech-ed-sd-w06.vercel.app/</a>
+  </p>
 </div>
 <section>
   <h2>📋 Project Outline</h2>
