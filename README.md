@@ -50,6 +50,15 @@
   </ul>
 </section>
 <section>
+  <h2>📁 Project Structure</h2>
+  <h3>JSX</h3>
+  <p>All JSX components are located inside the ./src/jsx folder. Some are fully modular, others are specialized for the project. The header consists of: header.jsx, headingTitle.jsx, nav.jsx and anchorLink.jsx. The main body consists of: bodyMain.jsx, clickableImage.jsx, gamePanel.jsx, statText.jsx, storeItem.jsx and storePanel.jsx. The footer consists of: footer.jsx.</p>
+  <h3>JS</h3>
+  <p>All JS files are located inside the ./src/js folder. These files are mostly supporting data and/or behaviours that have no relationship to the DOM.</p>
+  <h3>CSS</h3>
+  <p>All CSS files are located inside the ./src/css folder. They are named after their equivalent .jsx.</p>
+</section>
+<section>
   <h2>✔️ Implementation (of Requirements)</h2>
     <h3>Why can't I hold all these Tims?</h3>
     <p>You collect passive Tims and gain Tims on clicking! All with the power of React™.</p>
