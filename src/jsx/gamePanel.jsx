@@ -1,14 +1,14 @@
-import "../../../../css/bodyMain.css";
-import ClickableImage from "../modular/clickableImage";
-import StatText from "../modular/statText";
-import useTimer from "../../../../js/useTimer.js";
+import "../css/bodyMain.css";
+import ClickableImage from "./clickableImage.jsx";
+import StatText from "./statText.jsx";
+import useTimer from "../js/useTimer.js";
 import {
   getTotalTims,
   addTotalTims,
   getTPC,
   getTPS,
   setTotalTims,
-} from "../../../../js/playerHandler.js";
+} from "../js/playerHandler.js";
 
 export default function GamePanel() {
   const theTimerval = useTimer(getTotalTims(), 1000, onTick);

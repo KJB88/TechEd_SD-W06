@@ -1,4 +1,4 @@
-import "../../../../css/bodyMain.css";
+import "../css/bodyMain.css";
 
 export default function ClickableImage(data) {
   return (

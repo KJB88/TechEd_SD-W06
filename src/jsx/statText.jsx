@@ -1,4 +1,4 @@
-import "../../../../css/bodyMain.css";
+import "../css/bodyMain.css";
 import { useEffect } from "react";
 
 export default function StatText(data) {
