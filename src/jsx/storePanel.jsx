@@ -31,7 +31,6 @@ export default function StorePanel() {
 }
 
 function onClick(itemID, itemCost) {
-  console.log(itemID);
   const currentTims = getTotalTims();
   if (currentTims <= itemCost) return;
 

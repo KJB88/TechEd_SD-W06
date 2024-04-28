@@ -15,6 +15,7 @@ class Item {
     this.itemID = itemID;
     this.itemName = itemName;
     this.itemCost = itemCost;
+    this.itemBaseCost = itemCost;
     this.itemIncrease = itemIncrease;
     this.itemSrc = itemSrc;
     this.itemSrcAlt = itemSrcAlt;
@@ -71,7 +72,7 @@ const itemStore = [
     1000,
     "",
     "",
-    "+5 more Tims on click",
+    "+5 more Tims per click",
     "We've tried everything to keep Tim focused, but it's not helping. Time to enlist Manny to help from the top rope.",
     () => {
       addTPC(5);
@@ -84,7 +85,7 @@ const itemStore = [
     2500,
     "",
     "",
-    "+10 more Tims on click & per sec.",
+    "+10 more Tims per click & per sec.",
     "When in doubt, hire Joe. Although, his rate is a bit pricy and he insists to be paid in pogs. Whatever those are...",
     () => {
       addTPS(10), addTPC(10);
@@ -96,7 +97,6 @@ export function getItemsLength() {
   return itemStore.length;
 }
 
-// TODO: handle undefined
 export function getItem(itemID) {
   return itemStore[itemID];
 }
@@ -108,10 +108,23 @@ export function getItemList() {
 export function getItemCost(itemID) {
   return itemStore[itemID].itemCost;
 }
-export function buyItem(itemID) {
-  console.log(itemID);
-  addItem(itemStore[itemID]);
 
-  itemStore[itemID].itemCost +=
-    itemStore[itemID].itemIncrease * getItemCount(itemID);
+export function buyItem(itemID) {
+  addItem(itemStore[itemID]);
+  updateCost(itemID);
+}
+
+export function updateCost(itemID) {
+  if (getItemCount(itemID) === 0)
+    itemStore[itemID].itemCost = itemStore[itemID].itemBaseCost;
+  else {
+    itemStore[itemID].itemCost =
+      itemStore[itemID].itemIncrease * getItemCount(itemID);
+  }
+}
+
+export function resetStore() {
+  for (let i = 0; i < itemStore.length; i++) {
+    itemStore[i].itemCost = itemStore[i].itemBaseCost;
+  }
 }

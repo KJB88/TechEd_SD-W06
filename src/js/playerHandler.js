@@ -1,3 +1,4 @@
+import { updateCost } from "./storeHandler";
 import { generateAdjectiveNoun } from "./wordlibs";
 
 const playerData = {
@@ -115,6 +116,31 @@ export function resetPlayerName() {
 }
 
 /* All */
+// Save
+export function savePlayerData() {
+  localStorage.setItem("player", JSON.stringify(playerData));
+  console.log("saved");
+}
+// Set
+export function setAllPlayerData(
+  playerName,
+  playerTims,
+  playerTPS,
+  playerTPC,
+  playerItems
+) {
+  setPlayerName(playerName);
+  setTotalTims(playerTims);
+  setTPS(playerTPS);
+  setTPC(playerTPC);
+
+  for (let i = 0; i < playerItems.length; i++) {
+    if (playerItems[i] == 0) continue;
+
+    setItem(i, playerItems[i]);
+    if (playerItems[i] > 0) updateCost(i);
+  }
+}
 // Reset
 export function resetAllPlayerData() {
   resetPlayerName();
