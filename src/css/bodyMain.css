@@ -18,7 +18,7 @@ main {
   border-radius: 20px;
   border: 5px white solid;
 
-  background-image: url("/vscode_blur.png");
+  background-image: url("/vscode_blur.webp");
   background-size: cover;
 }
 
