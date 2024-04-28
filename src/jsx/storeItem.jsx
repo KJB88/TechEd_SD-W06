@@ -5,7 +5,7 @@ import { useState } from "react";
 
 /* Custom Code*/
 import useTimer from "../js/useTimer.js";
-import { getTotalTims } from "../js/playerHandler.js";
+import { getItemCount, getTotalTims } from "../js/playerHandler.js";
 import { getItemCost } from "../js/storeHandler.js";
 
 /* Component that handles displaying an Item within the Store.
@@ -15,7 +15,7 @@ export default function StoreItem(data) {
   const [isOpen, setIsOpen] = useState(false); // Tooltip state
   const [itemCost, setItemCost] = useState(data.itemCost);
   const [isAffordable, setIsAffordable] = useState(false); // Highlight/greyout state
-
+  const [itemCount, setItemCount] = useState(data.itemCount);
   // Check if we can afford the current item
   useTimer(100, () => {
     if (getTotalTims() >= itemCost) setIsAffordable(true);
@@ -44,11 +44,12 @@ export default function StoreItem(data) {
           onClick={() => {
             data.onClick(data.itemID, itemCost);
             setItemCost(getItemCost(data.itemID));
+            setItemCount(getItemCount(data.itemID));
           }}
           ref={refs.setReference}
           {...getReferenceProps()}
         >
-          <span>{data.itemCount}</span>
+          <span>{itemCount}</span>
           <span>{data.itemName}</span>
           <span>Costs: {itemCost}</span>
           <img src={data.itemSrc} alt={data.itemSrcAlt}></img>
@@ -60,7 +61,7 @@ export default function StoreItem(data) {
           ref={refs.setReference}
           {...getReferenceProps()}
         >
-          <span>{data.itemCount}</span>
+          <span>{itemCount}</span>
           <span>{data.itemName}</span>
           <span>Costs: {itemCost}</span>
           <img src={data.itemSrc} alt={data.itemSrcAlt}></img>
