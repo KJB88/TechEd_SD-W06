@@ -5,7 +5,6 @@ class Item {
     itemID,
     itemName,
     itemCost,
-    itemIncrease,
     itemSrc,
     itemSrcAlt,
     itemDesc,
@@ -16,7 +15,6 @@ class Item {
     this.itemName = itemName;
     this.itemCost = itemCost;
     this.itemBaseCost = itemCost;
-    this.itemIncrease = itemIncrease;
     this.itemSrc = itemSrc;
     this.itemSrcAlt = itemSrcAlt;
     this.itemDesc = itemDesc;
@@ -30,7 +28,6 @@ const itemStore = [
     0,
     "Caffeinated Beverage",
     20,
-    20,
     "",
     "",
     "+1 more Tims per sec.",
@@ -42,7 +39,6 @@ const itemStore = [
   new Item(
     1,
     "More Fist",
-    100,
     100,
     "",
     "",
@@ -56,7 +52,6 @@ const itemStore = [
     2,
     "Suspicious White Powder",
     1000,
-    500,
     "",
     "",
     "+5 more Tims per sec.",
@@ -69,7 +64,6 @@ const itemStore = [
     3,
     "Flying Elbow",
     1000,
-    1000,
     "",
     "",
     "+5 more Tims per click",
@@ -81,7 +75,6 @@ const itemStore = [
   new Item(
     4,
     "Hire Joe(s)",
-    2500,
     2500,
     "",
     "",
@@ -115,12 +108,8 @@ export function buyItem(itemID) {
 }
 
 export function updateCost(itemID) {
-  if (getItemCount(itemID) === 0)
-    itemStore[itemID].itemCost = itemStore[itemID].itemBaseCost;
-  else {
-    itemStore[itemID].itemCost =
-      itemStore[itemID].itemIncrease * getItemCount(itemID);
-  }
+  itemStore[itemID].itemCost =
+    itemStore[itemID].itemBaseCost * (getItemCount(itemID) + 1);
 }
 
 export function resetStore() {
