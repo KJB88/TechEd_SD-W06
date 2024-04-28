@@ -1,9 +1,10 @@
 export default function StoreItem(data) {
   return (
-    <div>
+    <div className="item-panel">
+      <span>{data.itemCount}</span>
       <span>{data.itemName}</span>
       <img src={data.itemSrc}></img>
-      <p>{data.itemDesc}</p>
+      <span>{data.itemDesc}</span>
     </div>
   );
 }
