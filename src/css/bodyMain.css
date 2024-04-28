@@ -18,7 +18,7 @@ main {
   z-index: -1;
   position: absolute;
   top: 0;
-  background: url("tim_square.webp") repeat;
+  background: url("/tim_square.webp") repeat;
   height: 5076px;
   width: 5076px;
   animation: slide 60s linear infinite;
