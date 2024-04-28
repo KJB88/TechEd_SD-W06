@@ -5,12 +5,7 @@ const playerData = {
   totalTims: 0,
   TPS: 1,
   TPC: 1,
-  items: [
-    {
-      itemName: "",
-      count: 0,
-    },
-  ],
+  items: [0, 0, 0, 0, 0],
 };
 
 /* Total Tims */
@@ -83,8 +78,8 @@ export function getItems() {
 }
 
 // Get Count of an Item
-export function getItemCount(itemName) {
-  return playerData.items.find((item) => (item.itemName = itemName)).count;
+export function getItemCount(index) {
+  return playerData.items[index];
 }
 
 // Add

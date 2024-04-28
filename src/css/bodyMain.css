@@ -18,10 +18,13 @@ main {
   border-radius: 20px;
   border: 5px white solid;
 
-  background-image: url("vscode.png");
+  background-image: url("vscode_blur.png");
   background-size: cover;
 }
 
+.blur {
+  filter: blur(2px);
+}
 .clickableImage {
   width: 100px;
   height: 100px;
@@ -64,7 +67,7 @@ main {
   align-items: center;
   border-radius: 20px;
   border: 5px white solid;
-  background-image: url("bg.webp");
+  background-image: url("bg_blur.webp");
   background-size: cover;
 }
 

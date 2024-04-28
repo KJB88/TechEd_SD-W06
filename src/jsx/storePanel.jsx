@@ -1,5 +1,10 @@
 import { getItemList } from "../js/storeHandler";
-import { getItemCount } from "../js/playerHandler";
+import {
+  addItem,
+  getItemCount,
+  getTotalTims,
+  setTotalTims,
+} from "../js/playerHandler";
 import StoreItem from "./storeItem";
 
 export default function StorePanel() {
@@ -7,14 +12,15 @@ export default function StorePanel() {
 
   const htmlItems = items.map((item) => (
     <StoreItem
-      key={item.itemName}
-      itemCount={getItemCount(item.itemName)}
+      key={item.itemID}
+      itemCount={getItemCount(item.itemID)}
       itemCost={item.itemCost}
       itemName={item.itemName}
       itemSrc={item.itemSrc}
       itemAlt={item.itemSrcAlt}
       itemDesc={item.itemDesc}
       itemFluff={item.itemFluff}
+      onClick={onClick}
     />
   ));
 
@@ -28,10 +34,15 @@ export default function StorePanel() {
   );
 }
 
-function onTick() {}
-function onClick(itemName) {
+function onClick(itemName, itemCost) {
   //TODO: Check Tims
   // TODO: DEduct Tims
   // TODO: Add Item
   // TODO: Apply effect
+  const currentTims = getTotalTims();
+  if (currentTims <= itemCost) return;
+
+  setTotalTims(currentTims - itemCost);
+  addItem();
+  console.log("PURCHASING " + itemName);
 }

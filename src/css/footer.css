@@ -1,5 +1,5 @@
 footer {
-  width: 100%;
+  width: 415px;
   height: 30px;
   position: absolute;
   bottom: 0;
@@ -13,7 +13,17 @@ footer {
   justify-content: center;
 
   background-image: url("tim_square.png");
-  background-position-y: 42%;
+  background-size: contain;
 
+  border-radius: 20px;
+}
+
+footer p {
   font-weight: bold;
+  background-color: rgba(1, 1, 1, 0.75);
+  border-radius: 20px;
+  margin-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 2px;
 }
