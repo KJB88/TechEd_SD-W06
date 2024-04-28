@@ -12,8 +12,6 @@
 </div>
 <section>
   <h2>📋 Project Outline</h2>
-  <p>TODO</p>
-  <p><b>All requirements and stretch goals were TODO. No specific difficulties.</b></p>
   <p>
     It's time for some more cookies. Re-create the Cookie Clicker game from previous weeks as a React application. It's useful to build the same application in the new paradigm so you can draw direct comparisons and see how the new approach is different from the old one.
   </p>
@@ -30,7 +28,6 @@
   <h2>🙍 User Stories</h2>
   <h3>As a User, I would like to...</h3>
   <ul>
-    <li>...TODO</li>
     <li>...be able to click the cookie and increment the counter.</li>
     <li>...see the counter automatically increment using an interval timer.</li>
     <li>...purchase items i can afford in the shop and increase the number of cookies every time the interval passes.</li>
