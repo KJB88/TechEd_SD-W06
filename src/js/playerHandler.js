@@ -82,14 +82,20 @@ export function getItemCount(index) {
   return playerData.items[index];
 }
 
-// Add
+// Set
+export function setItem(itemID, quantity) {
+  playerData.items[itemID] = quantity;
+}
+
 export function addItem(item) {
-  playerData.items.push(item);
+  playerData.items[item.itemID] += 1;
+
+  item.itemEffect();
 }
 
 // Reset
 export function resetItems() {
-  // TODO:
+  for (let i = 0; i < playerData.items.length; i++) playerData.items[i] = 0;
 }
 
 /* Player Name */

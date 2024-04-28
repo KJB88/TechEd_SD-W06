@@ -1,10 +1,5 @@
-import { getItemList } from "../js/storeHandler";
-import {
-  addItem,
-  getItemCount,
-  getTotalTims,
-  setTotalTims,
-} from "../js/playerHandler";
+import { buyItem, getItemList } from "../js/storeHandler";
+import { getItemCount, getTotalTims, setTotalTims } from "../js/playerHandler";
 import StoreItem from "./storeItem";
 
 export default function StorePanel() {
@@ -13,6 +8,7 @@ export default function StorePanel() {
   const htmlItems = items.map((item) => (
     <StoreItem
       key={item.itemID}
+      itemID={item.itemID}
       itemCount={getItemCount(item.itemID)}
       itemCost={item.itemCost}
       itemName={item.itemName}
@@ -34,15 +30,11 @@ export default function StorePanel() {
   );
 }
 
-function onClick(itemName, itemCost) {
-  //TODO: Check Tims
-  // TODO: DEduct Tims
-  // TODO: Add Item
-  // TODO: Apply effect
+function onClick(itemID, itemCost) {
+  console.log(itemID);
   const currentTims = getTotalTims();
   if (currentTims <= itemCost) return;
 
   setTotalTims(currentTims - itemCost);
-  addItem();
-  console.log("PURCHASING " + itemName);
+  buyItem(itemID);
 }

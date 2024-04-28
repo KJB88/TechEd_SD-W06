@@ -9,21 +9,34 @@ import {
   getTPC,
   getTPS,
   setTotalTims,
+  getPlayerName,
 } from "../js/playerHandler.js";
 
 export default function GamePanel() {
+  const [count, setCount] = useState(getTotalTims());
+  const [tpc, setTPC] = useState(getTPC());
+  const [tps, setTPS] = useState(getTPS());
+
   useTimer(1000, () => {
     setCount(onTick());
+    setTPS(getTPS());
+    setTPC(getTPC());
   });
-  const [count, setCount] = useState(getTotalTims());
 
   return (
     <div className="panel">
-      <ClickableImage src={"tim_circle.png"} alt="" onClick={() => onClick()} />
+      <span className="name-span">{getPlayerName()}</span>
+      <ClickableImage
+        src={"tim_circle.png"}
+        alt=""
+        onClick={() => {
+          onClick();
+        }}
+      />
       <div className="stat-panel">
-        <StatText innerText="TPC: " stat={getTPC()} />
+        <StatText innerText="TPC: " stat={tpc} />
         <StatText innerText="Tims: " stat={count} />
-        <StatText innerText="TPS: " stat={getTPS()} />
+        <StatText innerText="TPS: " stat={tps} />
       </div>
     </div>
   );
@@ -31,7 +44,6 @@ export default function GamePanel() {
 
 function onClick() {
   addTotalTims(getTPC());
-  console.log(getTotalTims());
 }
 
 function onTick() {

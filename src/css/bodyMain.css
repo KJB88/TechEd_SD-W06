@@ -22,9 +22,10 @@ main {
   background-size: cover;
 }
 
-.blur {
-  filter: blur(2px);
+.name-span {
+  margin-bottom: 115px;
 }
+
 .clickableImage {
   width: 100px;
   height: 100px;

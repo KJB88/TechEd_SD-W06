@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
 // setInterval - but Reactive!
-export default function useTimer(duration = 1000, countCallback) {
+export default function useTimer(duration = 1000, callback) {
   useEffect(() => {
     const interval = setInterval(() => {
-      countCallback();
+      callback();
     }, duration);
 
     return () => {
