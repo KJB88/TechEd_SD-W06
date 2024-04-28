@@ -119,7 +119,6 @@ export function resetPlayerName() {
 // Save
 export function savePlayerData() {
   localStorage.setItem("player", JSON.stringify(playerData));
-  console.log("saved");
 }
 // Set
 export function setAllPlayerData(

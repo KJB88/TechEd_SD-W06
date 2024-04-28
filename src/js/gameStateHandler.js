@@ -4,20 +4,17 @@ import {
   setAllPlayerData,
 } from "./playerHandler";
 import { resetStore } from "./storeHandler";
-
 // TODO: STYLING
 // TODO: Animation on click
 // TODO: Reading background
 initialize();
 setInterval(save, 1000);
 export function initialize() {
-  console.log("init");
   resetGame();
   load();
 }
 
 export function save() {
-  console.log("saving");
   savePlayerData();
 }
 
@@ -26,13 +23,11 @@ export function load() {
 
   // No player data
   if (player == null) {
-    console.log("new player");
     resetAllPlayerData();
     save();
   }
   // Player data found
   else {
-    console.log("existing player");
     setAllPlayerData(
       player.playerName,
       player.totalTims,

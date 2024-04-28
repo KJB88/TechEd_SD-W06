@@ -5,6 +5,32 @@ main {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+
+  --gradient: linear-gradient(
+    90deg,
+    rgba(20, 19, 19, 0.75) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+
+.sliding-background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  background: url("tim_square.webp") repeat;
+  height: 5076px;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, -1692px, 0);
+  }
 }
 
 .panel {
@@ -16,7 +42,9 @@ main {
   align-items: center;
   justify-content: flex-end;
   border-radius: 20px;
-  border: 5px white solid;
+  border: var(--gradient);
+  border-width: 5px;
+  border-style: solid;
 
   background-image: url("/vscode_blur.webp");
   background-size: cover;
@@ -33,6 +61,41 @@ main {
   border: white solid 5px;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.75) 0.3rem 0.3rem;
+}
+
+.clickableImage:hover {
+  border-color: gold;
+}
+
+.clickableImage:active {
+  border-color: red;
+  animation: vibrate 0.15s linear 0s 1 normal none;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(2px, -2px);
+  }
+
+  40% {
+    transform: translate(2px, 2px);
+  }
+
+  60% {
+    transform: translate(-2px, 2px);
+  }
+
+  80% {
+    transform: translate(-2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
 
 .stat-panel {
