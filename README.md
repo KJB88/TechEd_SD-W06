@@ -21,7 +21,7 @@
   </p>
 
   <p>
-    <b>All requirements and stretch goals are underway! No specific difficulties so far.</b>
+    <b>All requirements and stretch goals are complete! No specific difficulties so far.</b>
   </p>
 </section>
 <section>
@@ -46,23 +46,38 @@
 <h2>🥅 Stretch Goals</h2>
   <ul>
     <li>Store the cookies and cookiesPerSecond values in localStorage so they persist between page refreshes.</li>
+    <li>Stylish UI.</li>
   </ul>
 </section>
 <section>
+  <h2>📁 Project Structure</h2>
+  <h3>JSX</h3>
+  <p>All JSX components are located inside the ./src/jsx folder. Some are fully modular, others are specialized for the project. The header consists of: header.jsx, headingTitle.jsx, nav.jsx and anchorLink.jsx. The main body consists of: bodyMain.jsx, clickableImage.jsx, gamePanel.jsx, statText.jsx, storeItem.jsx and storePanel.jsx. The footer consists of: footer.jsx.</p>
+  <h3>JS</h3>
+  <p>All JS files are located inside the ./src/js folder. These files are mostly supporting data and/or behaviours that have no relationship to the DOM.</p>
+  <h3>CSS</h3>
+  <p>All CSS files are located inside the ./src/css folder. They are named after their equivalent .jsx.</p>
+</section>
+<section>
   <h2>✔️ Implementation (of Requirements)</h2>
-    <h3>TODO</h3>
-    <p>TODO</p>
+    <h3>Why can't I hold all these Tims?</h3>
+    <p>You collect passive Tims and gain Tims on clicking! All with the power of React™.</p>
+    <h3>Exploring the Map</h3>
+    <p>I took my items and mapped them onto some elements. I'm not sure why I put on my hiking boots and packed a lunch for this.</p>
+    <h3>Capitalism</h3>
+    <p>You click to provide me with your Tims and in return, I provide you with an item. It's good for the economy.</p>
 </section>
 <section>
   <h2>➕ Implementation (of Stretch Goals)</h2>
-  <h3>TODO</h3>
+  <h3>Persistence is Key</h3>
   <p>
-TODO
+So you continue to enjoy your addiction, your data saves and loads to/from local storage.
   </p>
+    <h3>The Peak of Style</h3>
+  <p>I copy and pasted loads of pictures of Tim. Don't judge me.</p>
 </section>
 <section>
   <h2>🏆 Honorary Mentions</h2>
-  <h3>TODO</h3>
-  <p>TODO</p>
-
+  <h3>CSS Animation</h3>
+  <p>Give Tim a smack and he wibbles. You can also watch him scroll across the screen gracefully like some kind of bearded, beanie-wearing swan-man.</p>
 </section>
