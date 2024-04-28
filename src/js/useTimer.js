@@ -1,21 +1,14 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
-export default function useTimer(
-  startVal = 0,
-  duration = 1000,
-  countCallback = null
-) {
-  const [count, setCount] = useState(startVal);
-
+// setInterval - but Reactive!
+export default function useTimer(duration = 1000, countCallback) {
   useEffect(() => {
     const interval = setInterval(() => {
-      setCount(countCallback());
+      countCallback();
     }, duration);
 
     return () => {
       clearInterval(interval);
     };
   });
-
-  return count;
 }

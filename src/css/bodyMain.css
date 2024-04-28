@@ -95,3 +95,14 @@ main {
   background-color: rgba(1, 1, 1, 1);
   border-color: white;
 }
+
+.item-panel-fluff {
+  width: 300px;
+  text-wrap: wrap;
+  border-top: white solid 3px;
+  border-bottom: white solid 3px;
+  border-right: white solid 3px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-left: 10px;
+}

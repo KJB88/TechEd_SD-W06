@@ -2,6 +2,7 @@ import "../css/bodyMain.css";
 import ClickableImage from "./clickableImage.jsx";
 import StatText from "./statText.jsx";
 import useTimer from "../js/useTimer.js";
+import { useState } from "react";
 import {
   getTotalTims,
   addTotalTims,
@@ -11,14 +12,17 @@ import {
 } from "../js/playerHandler.js";
 
 export default function GamePanel() {
-  const theTimerval = useTimer(getTotalTims(), 1000, onTick);
+  useTimer(1000, () => {
+    setCount(onTick());
+  });
+  const [count, setCount] = useState(getTotalTims());
 
   return (
     <div className="panel">
       <ClickableImage src={"tim_circle.png"} alt="" onClick={() => onClick()} />
       <div className="stat-panel">
         <StatText innerText="TPC: " stat={getTPC()} />
-        <StatText innerText="Tims: " stat={theTimerval} />
+        <StatText innerText="Tims: " stat={count} />
         <StatText innerText="TPS: " stat={getTPS()} />
       </div>
     </div>
