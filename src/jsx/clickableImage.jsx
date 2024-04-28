@@ -1,4 +1,6 @@
 import "../css/bodyMain.css";
+
+/* The container for Tim's lovely head. */
 export default function ClickableImage(data) {
   return (
     <img

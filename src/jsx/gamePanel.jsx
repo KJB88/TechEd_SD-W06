@@ -12,11 +12,13 @@ import {
   getPlayerName,
 } from "../js/playerHandler.js";
 
+/* The panel which holds the clickable TIM face and stat counters */
 export default function GamePanel() {
   const [count, setCount] = useState(getTotalTims());
   const [tpc, setTPC] = useState(getTPC());
   const [tps, setTPS] = useState(getTPS());
 
+  // Update stats every second
   useTimer(1000, () => {
     setCount(onTick());
     setTPS(getTPS());
@@ -42,10 +44,12 @@ export default function GamePanel() {
   );
 }
 
+// On click, add to the total tims
 function onClick() {
   addTotalTims(getTPC());
 }
 
+// On tick, add to the totalTims
 function onTick() {
   const tims = getTotalTims();
   const tps = getTPS();

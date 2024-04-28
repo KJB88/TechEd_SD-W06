@@ -2,9 +2,11 @@ import { buyItem, getItemList } from "../js/storeHandler";
 import { getItemCount, getTotalTims, setTotalTims } from "../js/playerHandler";
 import StoreItem from "./storeItem";
 
+/* The panel that holds the Store and Items */
 export default function StorePanel() {
   const items = getItemList();
 
+  // Time for some data....cartography?
   const htmlItems = items.map((item) => (
     <StoreItem
       key={item.itemID}
@@ -30,6 +32,7 @@ export default function StorePanel() {
   );
 }
 
+// Check if we can afford purchase, deduct (or cancel) then send to handlers
 function onClick(itemID, itemCost) {
   const currentTims = getTotalTims();
   if (currentTims <= itemCost) return;

@@ -1,6 +1,7 @@
 import AnchorLink from "./anchorLink.jsx";
 import "../css/header.css";
 
+/* The Nav Bar! */
 export default function Nav() {
   const htmlLinks = personalLinks.map((link) => (
     <AnchorLink
@@ -17,6 +18,7 @@ export default function Nav() {
   );
 }
 
+// List of personal links
 const personalLinks = [
   {
     url: "https://github.com/KJB88/TechEd_SD-W06",

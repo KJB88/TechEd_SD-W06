@@ -1,3 +1,4 @@
+/* Component to handle Title layout */
 export default function HeadingTitle() {
   return (
     <div className="title-div">

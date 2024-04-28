@@ -48,7 +48,7 @@ export function setTPS(value) {
 
 // Reset
 export function resetTPS() {
-  setTPS(0);
+  setTPS(1);
 }
 
 /* Tims per Click*/
@@ -88,6 +88,7 @@ export function setItem(itemID, quantity) {
   playerData.items[itemID] = quantity;
 }
 
+// Add
 export function addItem(item) {
   playerData.items[item.itemID] += 1;
 
@@ -140,6 +141,7 @@ export function setAllPlayerData(
     if (playerItems[i] > 0) updateCost(i);
   }
 }
+
 // Reset
 export function resetAllPlayerData() {
   resetPlayerName();

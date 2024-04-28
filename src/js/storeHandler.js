@@ -1,5 +1,6 @@
 import { addItem, addTPS, addTPC, getItemCount } from "./playerHandler";
 
+// Item Class
 class Item {
   constructor(
     itemID,
@@ -23,6 +24,7 @@ class Item {
   }
 }
 
+// Items
 const itemStore = [
   new Item(
     0,
@@ -86,32 +88,39 @@ const itemStore = [
   ),
 ];
 
+// Get how many items are in the store
 export function getItemsLength() {
   return itemStore.length;
 }
 
+// Get an item by ID
 export function getItem(itemID) {
   return itemStore[itemID];
 }
 
+// Get the item store
 export function getItemList() {
   return itemStore;
 }
 
+// Get the cost of an item by ID
 export function getItemCost(itemID) {
   return itemStore[itemID].itemCost;
 }
 
+// Add an item to the player inventory and adjust cost of item
 export function buyItem(itemID) {
   addItem(itemStore[itemID]);
   updateCost(itemID);
 }
 
+// Adjust the cost of item
 export function updateCost(itemID) {
   itemStore[itemID].itemCost =
     itemStore[itemID].itemBaseCost * (getItemCount(itemID) + 1);
 }
 
+// Reset all store items to base cost
 export function resetStore() {
   for (let i = 0; i < itemStore.length; i++) {
     itemStore[i].itemCost = itemStore[i].itemBaseCost;

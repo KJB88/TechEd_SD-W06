@@ -8,9 +8,10 @@ footer {
   transform: translateX(-50%);
 
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
 
   background-image: url("/tim_square.webp");
   background-size: contain;
@@ -26,4 +27,11 @@ footer p {
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 2px;
+}
+
+#clear-data {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  text-shadow: black 2px 2px;
+  border-radius: 10px;
 }

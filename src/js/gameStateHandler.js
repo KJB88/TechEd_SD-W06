@@ -4,20 +4,21 @@ import {
   setAllPlayerData,
 } from "./playerHandler";
 import { resetStore } from "./storeHandler";
-// TODO: STYLING
-// TODO: Animation on click
-// TODO: Reading background
+
+// Init
 initialize();
-setInterval(save, 1000);
+const autosave = setInterval(save, 1000);
 export function initialize() {
   resetGame();
   load();
 }
 
+// Saving
 export function save() {
   savePlayerData();
 }
 
+// Loading
 export function load() {
   let player = JSON.parse(localStorage.getItem("player"));
 
@@ -38,6 +39,15 @@ export function load() {
   }
 }
 
+// Reset
 export function resetGame() {
   resetStore();
+}
+
+export function resetPlayerAndGame() {
+  clearInterval(autosave);
+  resetGame();
+  resetAllPlayerData();
+  localStorage.clear();
+  location.reload();
 }
